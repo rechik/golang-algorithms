@@ -13,11 +13,11 @@ func binary_search_ints(list []int, item int) int {
 
 		guess = list[mid]
 
-		if (guess == item) {
+		if guess == item {
 			return mid
 		}
 
-		if (guess > item) {
+		if guess > item {
 			high = mid - 1
 		} else {
 			low = mid + 1

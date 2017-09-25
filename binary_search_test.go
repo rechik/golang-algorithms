@@ -1,8 +1,8 @@
 package golang_algorithms
 
 import (
-	"testing"
 	"sort"
+	"testing"
 )
 
 var data = []int{0: -10, 1: -5, 2: 0, 3: 1, 4: 2, 5: 3, 6: 5, 7: 7, 8: 11, 9: 100, 10: 110, 11: 150, 12: 1000, 13: 10000}
