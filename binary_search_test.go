@@ -22,7 +22,7 @@ var tests = []struct {
 
 func TestSearch(t *testing.T) {
 	for _, e := range tests {
-		i := binary_search_ints(data, e.n)
+		i := BinarySearchInts(data, e.n)
 		if i != e.i {
 			t.Errorf("%s: expected index %d; got %d", e.name, e.i, i)
 		}
@@ -31,7 +31,7 @@ func TestSearch(t *testing.T) {
 
 func BenchmarkBinarySearchInts(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		binary_search_ints(data, 666)
+		BinarySearchInts(data, 666)
 	}
 }
 

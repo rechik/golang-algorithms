@@ -2,7 +2,7 @@ package golang_algorithms
 
 // Search and return index of given item
 // If no result then return -1
-func binary_search_ints(list []int, item int) int {
+func BinarySearchInts(list []int, item int) int {
 	var low = 0
 	var high = len(list) - 1
 	var mid int
