@@ -2,6 +2,7 @@ package golang_algorithms
 
 import (
 	"testing"
+	"sort"
 )
 
 var unsortedInts = []int{
@@ -25,5 +26,17 @@ func TestQuickSort(t *testing.T) {
 	sorted := QuickSort(unsortedInts)
 	if len(unsortedInts) != len(sorted) && !IsSorted(sorted) {
 		t.Errorf("Got %d", sorted)
+	}
+}
+
+func BenchmarkQuickSortInts(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		QuickSort(unsortedInts)
+	}
+}
+
+func BenchmarkStandartSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		sort.Ints(unsortedInts)
 	}
 }
