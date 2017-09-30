@@ -3,7 +3,6 @@ package golang_algorithms
 import (
 	"testing"
 	"sort"
-	"fmt"
 )
 
 var unsortedInts = []int{
@@ -30,8 +29,6 @@ func TestQuickSortOptimize(t *testing.T) {
 	if !IsSorted(unsorted) {
 		t.Errorf("Got %d", unsorted)
 	}
-
-	fmt.Printf("Sorted: %+v\n", unsorted)
 }
 
 func TestQuickSortBlunt(t *testing.T) {
@@ -41,8 +38,6 @@ func TestQuickSortBlunt(t *testing.T) {
 	if !IsSorted(sorted) {
 		t.Errorf("Got %d", unsorted)
 	}
-
-	fmt.Printf("Sorted: %+v\n", sorted)
 }
 
 func BenchmarkQuickSortOptimize(b *testing.B) {
@@ -62,3 +57,4 @@ func BenchmarkStandartSort(b *testing.B) {
 		sort.Ints(unsortedInts)
 	}
 }
+

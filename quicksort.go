@@ -1,9 +1,6 @@
 package golang_algorithms
 
-import (
-	//"math/rand"
-)
-
+// Simple and slow implementation
 func QuickSortBlunt(array []int) []int {
 	if len(array) < 2 {
 		return array
@@ -28,6 +25,7 @@ func QuickSortBlunt(array []int) []int {
 	}
 }
 
+// Quick implementation of algorithm
 func QuickSortOptimize(array []int) {
 	if len(array) < 2 {
 		return
@@ -61,6 +59,7 @@ func QuickSortOptimize(array []int) {
 	QuickSortOptimize(array[left + 1:])
 }
 
+// Sorted or not array
 func IsSorted(array []int) bool {
 	n := len(array)
 	for i := n - 1; i > 0; i-- {
