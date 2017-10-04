@@ -21,7 +21,7 @@ func (g *Graph) Load(key string) []string {
 	return g.values[key]
 }
 
-// Search nearest friend
+// Search nearest friend with given name
 func (g *Graph) Search(name string) bool {
 	g.pushFriendsToQueue(g.Load("you"))
 
